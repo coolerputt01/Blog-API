@@ -8,6 +8,7 @@ public partial class Program
     private static void Main(string[] args)
     {
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+        builder.Services.AddValidation();
         var app = builder.Build();
 
         app.MapBlogEndpoints();

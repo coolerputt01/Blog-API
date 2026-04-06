@@ -1,7 +1,8 @@
+using System.ComponentModel.DataAnnotations;
 namespace Blog.Dtos;
 
 public record CreateBlogDtos (
-    string title,
-    string category,
-    string content
+    [Required] [StringLength(50)] string title,
+    [Required] [StringLength(30)] string category,
+    [Required] string content
 );

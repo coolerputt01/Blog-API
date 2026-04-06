@@ -1,8 +1,8 @@
 namespace Blog.Dtos;
 
 public record UpdateBlogDtos (
-    string title,
+    [StringLength(50)] string title,
     string content,
-    string category,
+    [StringLength(30)] string category,
     DateOnly releaseDate
 );
